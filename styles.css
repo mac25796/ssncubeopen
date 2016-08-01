@@ -1,3 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Jura);
+@import url(https://fonts.googleapis.com/css?family=Mota+Italic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@font-face {
+    font-family: SSFD;
+    src: url("./fonts/thin.ttf");
+}
+
+ @font-face {
+    font-family: SSFD;
+    src: url("./fonts/ultra.ttf");
+    font-weight: 100;
+}
+
+ @font-face {
+    font-family: SSFD;
+    src: url("./fonts/regular.ttf");
+    font-weight: bold;
+}
+
+
 body {
   font-size: 16px;
   color: white;
@@ -14,17 +40,20 @@ hr{
 
 
 #logo-img {
-  background: url('img/logo45.gif') no-repeat;
-  width: 50px;
-  height: 50px;
+  background: url('img/logo451.gif') no-repeat;
+  width: 46px;
+  height: 46px;
+  margin-top: 5px;
   margin-left:10px;
   margin-right: 0px; 
 }
 
 #header-nav {
-  background-color: black; /*#C63D0F  ;*/
+  background-color: #222; /*#C63D0F  ;*/
   border-radius: 0;
   border: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-brand h1 { 
@@ -48,8 +77,9 @@ hr{
 }
 
 #nav-list a{
-  color: white;
+  color: #e6563e;
   font-weight: bold;
+  font-size: 0.9em;
 }
 
 #nav-list a:hover {
@@ -59,7 +89,7 @@ hr{
 
 .navbar-header { /*button.navbar-toggle 
   border: 1px solid white;*/
-  background-color: black;
+  background-color: #222;
 }
 
 .navbar-header .icon-bar {
@@ -72,7 +102,7 @@ hr{
 /*BODY*/
 
  #godown{
-   height: 60px;
+   height: 50px;
 }
 
 
@@ -83,40 +113,44 @@ hr{
   
  }
 #main-content {
-  background: url("./img/blacktexture1.jpg");
+  
   border-radius: 20px;
   color: #fff;
-  margin-bottom: 50px;
 }
 
 #cname{
-  color: white;
-  font-size: 2.5em;
-  font-weight: bold;
+  font-size: 4em;
+  font-family: SSFD;
+  color: #4dadfe;
 }
 
 #mathdp{
   color: white;
-  font-size: 1.5em;
+  font-size: 2.1em;
   font-weight: bold;
+  font-family: Merriweather;
 }
 
 #mathcl{
   font-weight: bold;
   color: white;
-  font-size: 1.1em;
+  font-size: 2.1em;
   font-weight: bold;
+  font-family: Jura;
+  color: #FFA500;
 }
 
 #org{
-    color: white;
-    font-size: 1em;
+    color: #4dadfe;;
+    font-size: 2em;
+    font-family: SSFD;
 }
 
 #sco{
   color: white;
-  font-size: 2.0em;
+  font-size: 3.0em;
   font-weight: bold;
+  font-family: 'Bree Serif';
 }
 
 #countdown{
@@ -152,7 +186,7 @@ hr{
   background: url("./img/blacktexture1.jpg");
   border-radius: 20px;
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 #Venue{

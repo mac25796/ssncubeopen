@@ -10,23 +10,65 @@
   <link href='https://fonts.googleapis.com/css?family=Oxygen:100,250,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   <title>SSN Cube Open</title>
-<!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
   <script>
 //insert this in your jquery
 //control the resizing of menu and go down the content in the correct position
 
-    $("#header-nav").resize(function () {
-        $('#godown').height($("#header-nav").height() + 10);
-    });
-
-    if ($("#header-nav").height() > $('#godown').height()) $('#godown').height($("#header-nav").height() + 10);
--->
+  $(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
 </script>
 </head>
 <body>
   <header>
     <nav id="header-nav" class="navbar navbar-default pos">
-      
+        
         <div class="navbar-header">
 
           <a href="index.html" class="pull-left visible-md visible-sm visible-lg">
@@ -34,7 +76,7 @@
           </a>
 
           <div class="navbar-brand">
-              <a href="index.html"><h1>SSN CUBE OPEN</h1></a>
+              <a href="index.html" ><h1 style="color: #EE9000;">SSN CUBE OPEN</h1></a>
           </div>
             <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -48,25 +90,25 @@
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
           <li>
-              <a href="#About" class=" text-center">About</a>
+              <a href="#About" class=" text-center">ABOUT</a>
             </li>   
             <li>
-              <a href="#Events" class=" text-center">Events</a>
+              <a href="#Events" class=" text-center">EVENTS</a>
             </li>   
             <li>
-              <a href="#Sched" class=" text-center">Schedule</a>
+              <a href="#Sched" class=" text-center">SCHEDULE</a>
             </li>   
             <li>
-              <a href="#Venue" class=" text-center">Venue</a>
+              <a href="#Venue" class=" text-center">VENUE</a>
             </li>  
             <li>
-              <a href="#Register" class=" text-center">Registration</a>
+              <a href="#Register" class=" text-center">REGISTRATION</a>
             </li>  
             <li>
-              <a href="#" class=" text-center">Sponsors</a>
+              <a href="#" class=" text-center">SPONSORS</a>
             </li>   
             <li>
-              <a href="#" class=" text-center">Contact US</a>
+              <a href="#" class=" text-center">CONTACT US</a>
             </li>  
           </ul><!-- #nav-list -->
         </div><!-- .collapse .navbar-collapse -->
