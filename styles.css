@@ -1,0 +1,338 @@
+body {
+  font-size: 16px;
+  color: white;
+  background-color: #fff; /*#FDF3E7*//*#e7ebf0;#FFF8DC;*/
+  background: url('img/fbg.jpg');
+  font-family: 'Oxygen', sans-serif;
+}
+
+hr{
+  border-color: blue;
+  width: 50%;
+
+}
+
+
+
+#logo-img {
+  background: url('img/logo45.gif') no-repeat;
+  width: 50px;
+  height: 50px;
+  margin-left:10px;
+  margin-right: 0px; 
+}
+
+#header-nav {
+  background-color: black; /*#C63D0F  ;*/
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand h1 { 
+  font-family: 'Lora', serif;
+  color: white; 
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+  text-align: center;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#header-nav > .container {
+  margin-right: 0px;
+}
+
+#nav-list a{
+  color: white;
+  font-weight: bold;
+}
+
+#nav-list a:hover {
+  color: black;
+  background: white;
+}
+
+.navbar-header { /*button.navbar-toggle 
+  border: 1px solid white;*/
+  background-color: black;
+}
+
+.navbar-header .icon-bar {
+  border: 1px solid white;
+}
+
+
+
+
+/*BODY*/
+
+ #godown{
+   height: 60px;
+}
+
+
+.nt{
+  font-size: 1.3em;
+}
+.pos {
+  
+ }
+#main-content {
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#cname{
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+#mathdp{
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#mathcl{
+  font-weight: bold;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#org{
+    color: white;
+    font-size: 1em;
+}
+
+#sco{
+  color: white;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+#countdown{
+  text-align: center;
+}
+#cntdn{
+  border-radius: 15px;
+  text-align: center;
+  color: #212121;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.menu-description {
+  background-color: white;
+  border: 1px solid black;
+  color: #036;
+  margin-bottom: 20px;
+}
+
+.menu-description > p {
+  padding:20px;
+}
+
+#Events {
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#About{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#Venue{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+
+#Register{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#Sched{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#About  h2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+#About  p {
+  color: white;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+
+ #map-tile {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-tile { 
+  overflow: hidden;
+  width: 260px;
+  height: 365px;
+  padding: 20px 30px;
+  margin: 0 auto 15px;
+  color:#fff!important;
+  background-color:#2196F3!important;
+  border-radius: 23px;
+}
+
+
+.category-tile p {  
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #000;
+}
+
+.row a {
+  text-decoration: none;
+}
+
+.dimg {
+  border-radius: 9px;
+}
+
+.cc{
+  background-color: #fff;
+  border-radius: 5px;
+  width: 30%;
+}
+/*
+#grid{
+  width:20%;
+  border-radius: 23px;
+  margin: 35px;
+
+}
+
+ MENU CATEGORIES PAGE 
+.category-tile { 
+  text-align: center;
+  width: 0%;
+}
+#grid span {
+  /*position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+#grid:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+*/
+/*
+
+#menu-categories-title + div {
+  margin-bottom: 50px;
+}
+
+*/
+@media (min-width: 992px){
+  #cube-logo{
+    background: url('img/logo300.gif') no-repeat;
+    width: 300px;
+    height:300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #cube-logo{
+    background: url('img/logo200.gif') no-repeat;
+    width: 200px;
+    height:200px;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 767px){
+  #cube-logo{
+    background: url('img/logo100.gif') no-repeat;
+    width: 100px;
+    height:100px;
+  }
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 569px) {
+  #cube-logo{
+    background: url('img/logo100.gif') no-repeat;
+    width: 100px;
+    height:100px;
+  }
+ /*
+  #menu-tile, #specials-tile {
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+*/
+
+/*
+.category-tile { 
+  
+  border: 2px solid #f22;#3F0C1F;
+
+  overflow: hidden;
+  width: 260px;
+  height: 365px;
+  margin: 30px 30px 30px 30px;
+  padding: 50px 30px;
+
+  color:#fff!important;
+  background-color:#2196F3!important;
+  border-radius: 23px;
+}
+*/
+  .col-xxs-12 {
+
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: center;
+    width: 100%;
+
+  }
+}
