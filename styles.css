@@ -54,6 +54,7 @@ hr{
   border: 0;
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 .navbar-brand h1 { 
@@ -113,7 +114,7 @@ hr{
   
  }
 #main-content {
-  
+  line-height: 2;
   border-radius: 20px;
   color: #fff;
 }
@@ -126,7 +127,7 @@ hr{
 
 #mathdp{
   color: white;
-  font-size: 2.1em;
+  font-size: 2.5em;
   font-weight: bold;
   font-family: Merriweather;
 }
@@ -134,7 +135,7 @@ hr{
 #mathcl{
   font-weight: bold;
   color: white;
-  font-size: 2.1em;
+  font-size: 2.5em;
   font-weight: bold;
   font-family: Jura;
   color: #FFA500;
@@ -142,13 +143,14 @@ hr{
 
 #org{
     color: #4dadfe;;
-    font-size: 2em;
+    font-size: 2.2em;
+    font-weight: bold;
     font-family: SSFD;
 }
 
 #sco{
   color: white;
-  font-size: 3.0em;
+  font-size: 3.3em;
   font-weight: bold;
   font-family: 'Bree Serif';
 }
@@ -211,11 +213,7 @@ hr{
   margin-bottom: 50px;
 }
 
-#About  h2 {
-  color: white;
-  font-size: 1.5em;
-  font-weight: bold;
-}
+
 
 
 #About  p {
@@ -224,6 +222,13 @@ hr{
   font-weight: bold;
 }
 
+.up{
+  font-family: SSFD;
+  font-size: 65px;
+  padding-top: 10px;
+  font-weight: bold;
+  color: #4dadfe; 
+}
 
  #map-tile {
   height: 350px;
@@ -264,7 +269,7 @@ hr{
 }
 
 .cc{
-  background-color: #fff;
+  
   border-radius: 5px;
   width: 30%;
 }
@@ -311,9 +316,9 @@ hr{
   }
 
   #cube-logo{
-    background: url('img/logo300.gif') no-repeat;
-    width: 300px;
-    height:300px;
+    background: url('img/logo1001.gif') no-repeat;
+    width: 100px;
+    height: 131px;
   }
 }
 
@@ -322,11 +327,37 @@ hr{
   body{
     background: url('img/1280.jpg');
   }  
-
+  #godown{
+   height: 75px;
+  }
+  #main-content {
+    line-height: 1.5;
+    border-radius: 20px;
+    color: #fff;
+  }
   #cube-logo{
-    background: url('img/logo200.gif') no-repeat;
-    width: 200px;
-    height:200px;
+    background: url('img/logo1001.gif') no-repeat;
+    width: 100px;
+    height: 131px;
+  }
+  #cname{
+    font-size: 3em;
+  }
+
+  #mathdp{
+    font-size: 1.8em;
+  }
+
+  #mathcl{
+    font-size: 1.8em;
+  }
+
+  #org{
+    font-size: 1.5em;
+  }
+
+  #sco{
+    font-size: 2em;
   }
 }
 
@@ -335,11 +366,37 @@ hr{
     background: url('img/1280.jpg');
   }
 
-  #cube-logo{
-    background: url('img/logo100.gif') no-repeat;
-    width: 100px;
-    height:100px;
+  #main-content {
+    line-height: 1.5;
+    border-radius: 20px;
+    color: #fff;
   }
+
+  #cube-logo{
+    background: url('img/logo1001.gif') no-repeat;
+    width: 100px;
+    height: 131px;
+  }
+  #cname{
+    font-size: 2.5em;
+  }
+
+  #mathdp{
+    font-size: 1.6em;
+  }
+
+  #mathcl{
+    font-size: 1.4em;
+  }
+
+  #org{
+    font-size: 1.1em;
+  }
+
+  #sco{
+    font-size: 2em;
+  }
+
 }
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
@@ -347,12 +404,15 @@ hr{
   body{
     background: url('img/320.jpg');
   }
-
-  #cube-logo{
-    background: url('img/logo100.gif') no-repeat;
-    width: 100px;
-    height:100px;
+  #main-content {
+    line-height: 1.5;
   }
+  #cube-logo{
+    background: url('img/logo451.gif') no-repeat;
+    width: 45px;
+    height: 59px;
+  }
+
  /*
   #menu-tile, #specials-tile {
     width: 280px;
@@ -376,6 +436,25 @@ hr{
   border-radius: 23px;
 }
 */
+  #cname{
+    font-size: 2.3em;
+  }
+
+  #mathdp{
+    font-size: 1.4em;
+  }
+
+  #mathcl{
+    font-size: 1.4em;
+  }
+
+  #org{
+    font-size: 1.1em;
+  }
+
+  #sco{
+    font-size: 1.8em;
+  }
   .col-xxs-12 {
 
     position: relative;
