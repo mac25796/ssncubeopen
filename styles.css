@@ -311,7 +311,7 @@ hr{
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 569px) {
   body{
-    background: url('img/640.jpg');
+    background: url('img/320.jpg');
   }
 
   #cube-logo{
