@@ -103,7 +103,7 @@ hr{
 /*BODY*/
 
  #godown{
-   height: 50px;
+   height: 60px;
 }
 
 
@@ -198,6 +198,9 @@ hr{
   margin-bottom: 50px;
 }
 
+#ssn-logo{
+  border-radius: 8px;
+}
 
 #Register{
   background: url("./img/blacktexture1.jpg");
@@ -224,8 +227,8 @@ hr{
 
 .up{
   font-family: SSFD;
-  font-size: 65px;
-  padding-top: 10px;
+  font-size: 3em;
+  padding-top: 30px;
   font-weight: bold;
   color: #4dadfe; 
 }
@@ -273,6 +276,31 @@ hr{
   border-radius: 5px;
   width: 30%;
 }
+
+#Sponsors{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+
+#Contact{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+
+}
+
+footer{
+  background: url("./img/blacktexture1.jpg");
+  border-radius: 0px;
+  color: #81a0ff;
+  font-size: 1.3em;
+}
+
 /*
 #grid{
   width:20%;
@@ -327,8 +355,14 @@ hr{
   body{
     background: url('img/1280.jpg');
   }  
+  .up{
+    font-size: 2em;
+  }
+  #navname{
+    font-size: 0.95em;
+  }
   #godown{
-   height: 75px;
+   height: 80px;
   }
   #main-content {
     line-height: 1.5;
@@ -365,7 +399,15 @@ hr{
   body{
     background: url('img/1280.jpg');
   }
-
+  #navname{
+    font-size: 1em;
+  }
+  .up{
+    font-size: 1.8em;
+  }
+  #godown{
+   height: 60px;
+  }
   #main-content {
     line-height: 1.5;
     border-radius: 20px;
@@ -404,6 +446,15 @@ hr{
   body{
     background: url('img/320.jpg');
   }
+  p{
+    font-size: 0.8em;
+  }
+  .up{
+    font-size: 1.4em;
+  }
+   #navname{
+    font-size: 0.9em;
+  }
   #main-content {
     line-height: 1.5;
   }
@@ -437,7 +488,7 @@ hr{
 }
 */
   #cname{
-    font-size: 2.3em;
+    font-size: 2.1em;
   }
 
   #mathdp{
