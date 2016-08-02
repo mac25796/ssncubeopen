@@ -29,6 +29,7 @@ body {
   color: white;
   background-color: #fff; /*#FDF3E7*//*#e7ebf0;#FFF8DC;*/
   font-family: 'Oxygen', sans-serif;
+  background: url('img/bvg.svg');
 }
 
 hr{
@@ -338,11 +339,11 @@ footer{
 
 */
 @media (min-width: 992px){
-
+/*
   body{
     background: url('img/1920.jpg');
   }
-
+*/
   #cube-logo{
     background: url('img/logo1001.gif') no-repeat;
     width: 100px;
@@ -351,10 +352,10 @@ footer{
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  
+  /*
   body{
     background: url('img/1280.jpg');
-  }  
+  } */ 
   .up{
     font-size: 2em;
   }
@@ -396,9 +397,9 @@ footer{
 }
 
 @media (min-width: 570px) and (max-width: 767px){
-  body{
+  /*body{
     background: url('img/1280.jpg');
-  }
+  }*/
   #navname{
     font-size: 1em;
   }
@@ -443,9 +444,9 @@ footer{
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 569px) {
-  body{
+ /* body{
     background: url('img/320.jpg');
-  }
+  }*/
   p{
     font-size: 0.8em;
   }
