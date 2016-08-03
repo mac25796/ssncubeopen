@@ -1,6 +1,11 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+  <!--p>Made by Muthu Annamalai and Roopeshwar </p-->
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="w3.css">
@@ -13,8 +18,6 @@
   <script src="./js/jquery-1.11.3.min.js"> </script>
   <script src="./js/bootstrap.min.js"> </script>
   <script>
-//insert this in your jquery
-//control the resizing of menu and go down the content in the correct position
   $(document).ready(function () {
     $("nav").find("li").on("click", "a", function () {
         $('.navbar-collapse.in').collapse('hide');
@@ -48,7 +51,6 @@
     }
   });
  
-  // use the first element that is "scrollable"
   function scrollableElement(els) {
     for (var i = 0, argLength = arguments.length; i <argLength; i++) {
       var el = arguments[i],
@@ -77,7 +79,7 @@
         <div class="navbar-header">
 
           <a href="index.html" class="pull-left visible-md visible-sm visible-lg">
-            <div id="logo-img"></div>
+            <div id="img-logof" style="background: url('img/logo451.gif') ;  width: 46px;  height: 46px;  background-repeat: no-repeat;margin-left: 10px;"></div>
           </a>
 
           <div class="navbar-brand">
@@ -95,25 +97,25 @@
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
           <li>
-              <a href="#About" class=" text-center">ABOUT</a>
+              <a href="#About"  data-text="ABOUT" class="text-center hvr-radial-out ">ABOUT</a>
             </li>   
             <li>
-              <a href="#Events" class=" text-center">EVENTS</a>
+              <a href="#Events" data-text="EVENTS" class="text-center hvr-radial-out ">EVENTS</a>
             </li>   
             <li>
-              <a href="#Sched" class=" text-center">SCHEDULE</a>
+              <a href="#Sched" data-text="SCHEDULE" class="text-center hvr-radial-out ">SCHEDULE</a>
             </li>   
             <li>
-              <a href="#Venue" class=" text-center">VENUE</a>
+              <a href="#Venue" data-text="VENUE" class="text-center hvr-radial-out ">VENUE</a>
             </li>  
             <li>
-              <a href="#Register" class=" text-center">REGISTRATION</a>
+              <a href="#Register" data-text="REGISTRATION" class="text-center hvr-radial-out ">REGISTRATION</a>
             </li>  
             <li>
-              <a href="#Sponsors" class=" text-center">SPONSORS</a>
+              <a href="#Sponsors" data-text="SPONSORS" class="text-center hvr-radial-out ">SPONSORS</a>
             </li>   
             <li>
-              <a href="#Contact" class=" text-center">CONTACT US</a>
+              <a href="#Contact" data-text="CONTACT US" class="text-center hvr-radial-out ">CONTACT US</a>
             </li>  
           </ul><!-- #nav-list -->
         </div><!-- .collapse .navbar-collapse -->
@@ -274,7 +276,7 @@
                  <p class="up-second" style="font-size: 20px;">Participants wanting to avail accommodation, please fill this google <a href="https://docs.google.com/forms/u/0/d/1K6SDCPP-E7fTfw54fZMzfemT8DXvyBA-dkuROKCeIsM/viewform?edit_requested=true" target="_blank" style="color: #337ab7;"><u>form</u></a>.<br> You will be informed about the availability as soon as possible.</p>
                    
                  <div id="map-tile" class="col-md-12 col-sm-12 col-xs-12 col-xss-12">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.4252830750274!2d80.19508151423052!3d12.750870323134649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52512f04729e11%3A0xbc4ea0ae50ca1aaa!2sSSN+College+of+Engineering!5e0!3m2!1sen!2sin!4v1469645150576" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.4252830750274!2d80.19508151423052!3d12.750870323134649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52512f04729e11%3A0xbc4ea0ae50ca1aaa!2sSSN+College+of+Engineering!5e0!3m2!1sen!2sin!4v1469645150576" width="100%" height="350" frameborder="0" style="border:0;border-radius: 12px;" allowfullscreen></iframe>
                  </div>
       </center>
     </div>
@@ -294,11 +296,11 @@
                     <span class="glyphicon glyphicon-triangle-right" style="color: #e6563e;" ></span>
                     Payment is on the spot.<br></p>
                     <br>
-                    <h1>Fee Structure<br></h1>
+                    <h2 class ="up">Fee Structure<br></h1>
                     <p>
-                    1 event : Rs.150
+                    Single event : Rs.150<br>
                     <br>
-                    For every Additional event - Rs.50          
+                    For every Additional event : Rs.50          
                     </p>
       </center>
     </div>  
