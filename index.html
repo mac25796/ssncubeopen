@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+  <!--p>Made by Muthu Annamalai and Roopeshwar </p-->
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="w3.css">
@@ -10,31 +15,75 @@
   <link href='https://fonts.googleapis.com/css?family=Oxygen:100,250,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   <title>SSN Cube Open</title>
-<!--
+  <script src="./js/jquery-1.11.3.min.js"> </script>
+  <script src="./js/bootstrap.min.js"> </script>
   <script>
-//insert this in your jquery
-//control the resizing of menu and go down the content in the correct position
-
-    $("#header-nav").resize(function () {
-        $('#godown').height($("#header-nav").height() + 10);
+  $(document).ready(function () {
+    $("nav").find("li").on("click", "a", function () {
+        $('.navbar-collapse.in').collapse('hide');
     });
-
-    if ($("#header-nav").height() > $('#godown').height()) $('#godown').height($("#header-nav").height() + 10);
--->
-</script>
+  });
+  $(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
+</script> 
 </head>
 <body>
   <header>
     <nav id="header-nav" class="navbar navbar-default pos">
-      
+        
         <div class="navbar-header">
 
           <a href="index.html" class="pull-left visible-md visible-sm visible-lg">
-            <div id="logo-img"></div>
+            <div id="img-logof" style="background: url('img/logo451.gif') ;  width: 46px;  height: 46px;  background-repeat: no-repeat;margin-left: 10px;"></div>
           </a>
 
           <div class="navbar-brand">
-              <a href="index.html"><h1>SSN CUBE OPEN</h1></a>
+              <a href="index.html" ><h1 id="navname" style="color: #EE9000;">SSN CUBE OPEN</h1></a>
           </div>
             <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -48,25 +97,25 @@
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
           <li>
-              <a href="#About" class=" text-center">About</a>
+              <a href="#About"  data-text="ABOUT" class="text-center hvr-radial-out ">ABOUT</a>
             </li>   
             <li>
-              <a href="#Events" class=" text-center">Events</a>
+              <a href="#Events" data-text="EVENTS" class="text-center hvr-radial-out ">EVENTS</a>
             </li>   
             <li>
-              <a href="#Sched" class=" text-center">Schedule</a>
+              <a href="#Sched" data-text="SCHEDULE" class="text-center hvr-radial-out ">SCHEDULE</a>
             </li>   
             <li>
-              <a href="#Venue" class=" text-center">Venue</a>
+              <a href="#Venue" data-text="VENUE" class="text-center hvr-radial-out ">VENUE</a>
             </li>  
             <li>
-              <a href="#Register" class=" text-center">Registration</a>
+              <a href="#Register" data-text="REGISTRATION" class="text-center hvr-radial-out ">REGISTRATION</a>
             </li>  
             <li>
-              <a href="#Sponsors" class=" text-center">Sponsors</a>
+              <a href="#Sponsors" data-text="SPONSORS" class="text-center hvr-radial-out ">SPONSORS</a>
             </li>   
             <li>
-              <a href="#Contact" class=" text-center">Contact US</a>
+              <a href="#Contact" data-text="CONTACT US" class="text-center hvr-radial-out ">CONTACT US</a>
             </li>  
           </ul><!-- #nav-list -->
         </div><!-- .collapse .navbar-collapse -->
@@ -91,7 +140,7 @@
 
   <div id="About" class="container nt">
   <center>
-  <h2>About the Competition</h2>
+  <h2 class="up">About the Competition</h2>
   <p><br><br>SSN CUBE OPEN 2016 is organised by Department of Mathematics, <br>SSN College of Engineering , Chennai and will be held on August 05 & 06 , 2016. <br><br>The competition is open to all competitors of all nationalities. No experience in WCA competitions is necessary, but competitors should
   be familiar with the WCA <a class="WCAreg" target="_blank" href="https://worldcubeassociation.org/regulations" style="color: #337ab7;"><u>regulations</u></a>.<br><br><br>
   </p>
@@ -119,7 +168,7 @@
         <a href="#">
           <div class="category-tile">
             <p>2x2x2</p>
-            <img width="200" height="250" src="./img/2x2">
+            <img width="200" height="214" src="./img/2x2.png">
           </div>
         </a>
       </div>
@@ -127,7 +176,7 @@
         <a href="#">
           <div class="category-tile">
             <p>3x3x3</p>
-            <img width="200" height="250" src="./img/3x3">
+            <img width="200" height="250" src="./img/3x3.svg">
           </div>
         </a>
       </div>
@@ -135,7 +184,7 @@
         <a href="#">
           <div class="category-tile">
             <p>4x4x4</p>
-            <img width="200" height="250" src="./img/4x4">
+            <img width="225" height="225" src="./img/4x4.gif" style="position:relative;left:-10px;">
           </div>
         </a>
       </div>
@@ -143,7 +192,7 @@
         <a href="#">
           <div class="category-tile">
             <p>3x3x3 <br> Blindfolded</p>
-            <img width="200" height="250" src="./img/3x3">
+            <img width="200" height="250" src="./img/3x3.svg">
           </div>
         </a>
       </div>
@@ -151,7 +200,7 @@
         <a href="#">
           <div class="category-tile">
             <p>3x3x3 <br> One Handed</p>
-            <img width="200" height="250" src="./img/3x3">
+            <img width="200" height="208" src="./img/rubik21.png">
           </div>
         </a>
       </div>
@@ -159,7 +208,7 @@
         <a href="#">
           <div class="category-tile">
             <p>3x3x3 <br> Feet</p>
-            <img width="200" height="250" src="./img/3x3">
+            <img width="200" height="250" src="./img/3x3.svg">
           </div>
         </a>
       </div>
@@ -167,7 +216,7 @@
         <a href="#">
           <div class="category-tile">
             <p>Megaminx</p>
-            <img width="200" height="250" src="./img/mega">
+            <img width="220" height="220" src="./img/megaminx.gif" style="position: relative;left: -10px;">
           </div>
         </a>
       </div>
@@ -175,7 +224,7 @@
         <a href="#">
           <div class="category-tile">
             <p>Pyraminx</p>
-            <img width="200" height="250" src="./img/pyra">
+            <img width="220" height="220" src="./img/pyraminx.gif">
           </div>
         </a>
       </div>
@@ -183,7 +232,7 @@
         <a href="#">
           <div class="category-tile">
             <p>Skewb</p>
-            <img width="200" height="250" src="./img/skewb">
+            <img width="220" height="220" src="./img/skewb.gif">
           </div>
         </a>
       </div>
@@ -193,15 +242,15 @@
 
   <div id="Sched" class="container nt">
     <center>
-     <h2>Schedule</h2>
+     <h2 class="up">Schedule</h2>
         <br>
      <div>
          <img class="dimg" src="./img/aug5.jpg" height="150" width="110">
   
-         and
+         & 
 
          <img class="dimg" src="./img/aug6.jpg" height="150" width="110">
-         <p>2016</p>
+         &nbsp;2016
       </div>
 
       <p>
@@ -215,7 +264,7 @@
   <div id="Venue" class="container nt">
     <center>
                  <h2 style="" class="up">Venue</h2>
-                 <img id="ssn-logo" src="img/ssnlogo.png">
+                 <img id="ssn-logo" src="img/ssnlogo.png" >
                  <p class="up-second" style="font-size: 20px;">
                         SSN College of Engineering ,
                         Old Mahabalipuram Road, Kalavakkam, Tamil Nadu 603110, India .<br><br>
@@ -224,50 +273,136 @@
                         Bus Depot : 6 Km from Kelambakkam Bus Depot<br><br>
                         Visit the College's <a target="_blank" style="color: #337ab7;" href="http://www.ssn.edu.in/"><u>Website</u></a> for more information .
                  </p>
+                 <p class="up-second" style="font-size: 20px;">Participants wanting to avail accommodation, please fill this google <a href="https://docs.google.com/forms/u/0/d/1K6SDCPP-E7fTfw54fZMzfemT8DXvyBA-dkuROKCeIsM/viewform?edit_requested=true" target="_blank" style="color: #337ab7;"><u>form</u></a>.<br> You will be informed about the availability as soon as possible.</p>
                    
                  <div id="map-tile" class="col-md-12 col-sm-12 col-xs-12 col-xss-12">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.4252830750274!2d80.19508151423052!3d12.750870323134649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52512f04729e11%3A0xbc4ea0ae50ca1aaa!2sSSN+College+of+Engineering!5e0!3m2!1sen!2sin!4v1469645150576" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.4252830750274!2d80.19508151423052!3d12.750870323134649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52512f04729e11%3A0xbc4ea0ae50ca1aaa!2sSSN+College+of+Engineering!5e0!3m2!1sen!2sin!4v1469645150576" width="100%" height="350" frameborder="0" style="border:0;border-radius: 12px;" allowfullscreen></iframe>
                  </div>
       </center>
     </div>
 
     <div id="Register" class="container nt">  
       <center>
-                    <h2>Registration</h2>
+                    <h2 class="up">Registration</h2>
                     <p>
-                    <span class="glyphicon glyphicon-triangle-right"></span>
+                    <span class="glyphicon glyphicon-triangle-right" style="color: #e6563e;"></span>
                     Register on WCA website. <br>
-                    <a target="_blank" href="https://www.worldcubeassociation.org/competitions/SSNCubeOpen2016"> <u>Registration Link</u></a><br>
+                    <a target="_blank" href="https://www.worldcubeassociation.org/competitions/SSNCubeOpen2016"> <u><abbr title="https://www.worldcubeassociation.org/competitions/SSNCubeOpen2016">Click Here</abbr></u></a><br>
                     Make an account if you do not have one.<br> Make sure
                     you use your WCA ID and don&#39;t use any initials.
-                    <br>
+                    <br><br>
                     </p>
                     <p>
-                    <span class="glyphicon glyphicon-triangle-right" ></span>
+                    <span class="glyphicon glyphicon-triangle-right" style="color: #e6563e;" ></span>
                     Payment is on the spot.<br></p>
                     <br>
-                    <h1>Fee Structure<br></h1>
+                    <h2 class ="up">Fee Structure<br></h1>
                     <p>
-                    1 event : Rs.150
+                    Single event : Rs.150<br>
                     <br>
-                    For every Additional event - Rs.50          
+                    For every Additional event : Rs.50          
                     </p>
       </center>
     </div>  
 
-  <div id="Sponsors" class="container nt">  
+	<div id="Sponsors" class="container nt">  
     <center>
-                <h2>Sponsors</h2>
-                <img src="./img/cubelelo.png">
+                <h2 class="up">Sponsors</h2>
+                <img src="./img/cubelelo.png" style="border-radius: 10px;">
     </center>               
   </div>  
 
   <div id="Contact" class="container nt">
     <center>
-        <h2>Organizers</h2>
+        <h2 class="up">Organizers</h2>
         <br>
         <p> You can contact us at the following numbers for any queries.</p>
                        <p>
+                       <br>
+                       <span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+                       Vishwanath Jeyaraman :
+                       <span class="glyphicon glyphicon-earphone"></span>
+                       +91 9791042330 &nbsp;&nbsp;
+                       <span class="glyphicon glyphicon-envelope"></span>
+                       <a href="mailto:vishwanath.jeyaraman@gmail.com"> &nbsp;vishwanath.jeyaraman@gmail.com</a> <br><br>
+                       <span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+                       Sylesh Kumar : 
+                       <span class="glyphicon glyphicon-earphone"></span>
+                       +91 9176063410  &nbsp;&nbsp;
+                       <span class="glyphicon glyphicon-envelope"></span>
+                       <a href="mailto:Syleshkumar1996@gmail.com">  &nbsp;Syleshkumar1996@gmail.com</a> <br><br></p>
+
+                       <h2 class="up">Faculty Coordinators </h2>
+                       <br>
+                       <p>
+                       <span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+                       Dr. M. Sundarakannan : &nbsp;
+                       <span class="glyphicon glyphicon-envelope"></span>
+                       <a href="mailto:sundarakannanm@ssn.edu.in">&nbsp;sundarakannanm@ssn.edu.in</a><br><br>
+                       </p>
+
+                       <p>
+                       <span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+                        Dr. R. Sundareswaran : &nbsp;
+                       <span class="glyphicon glyphicon-envelope"></span>
+                       <a href="mailto:Sundareswaranr@ssn.edu.in">&nbsp;Sundareswaranr@ssn.edu.in</a><br><br>
+                       </p>
+
+                        <p>
+                       <span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+                        Dr. S. Sampath Kumar : &nbsp;
+                       <span class="glyphicon glyphicon-envelope"></span>
+                       <a href="mailto:sampathkumars@ssn.edu.in">  &nbsp;sampathkumars@ssn.edu.in</a><br>
+                       <br>
+                       </p>
+
+                       <p>
+                       <span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+                        Dr. M. Shanmugapriya : &nbsp;
+                       <span class="glyphicon glyphicon-envelope"></span>
+                       <a href="mailto:shanmugapriyam@ssn.edu.in">  &nbsp;shanmugapriyam@ssn.edu.in</a> <br>
+                       </p>
+   </center>
+  </div>  
+
+ <footer>
+ <center>
+  <div> 
+    <div class="copyright">&copy; SSN CUBE OPEN 2016. All rights reserved.</div>
+   
+  </div> 
+ </center>    
+ </footer>  
+
+
+
+
+</body>
+</html>
+
+
+<!--
+  
+
+
+     <section class="page_section" id="Sponsors">  
+        <header>
+            <div class="container">
+                <h2 style="" class="up">Sponsors</h2>
+                <br><br>
+                <img src="./img/cubelelo.png" >
+            </div>               
+        </header>
+    </section>  
+
+     <section class="page_section" id="Contact" style="height: auto;line-height: 12px;">  
+        <header>
+            <div class="container">
+                <h2 style="" class="up">Organizers  </h2>
+                <br>
+                    <p class="up-second" style="margin: auto;text-align: center;"> You can contact us at the following numbers for any queries.</p>
+                <p class="up-second" style="text-align: center;">
+>>>>>>> styling
                        <br>
                        <span class="glyphicon glyphicon-star-empty"></span>
                        Vishwanath Jeyaraman :
